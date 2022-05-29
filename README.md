@@ -19,7 +19,6 @@ Skills: EXPRESS JS/ NODE JS/ MONGODB / REACT/ JS / HTML / CSS
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=dev-mahir&show_icons=true&count_private=true)  
 
-![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=dev-mahir)  
 
 ![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=dev-mahir)  
 
