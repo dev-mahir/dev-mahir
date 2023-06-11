@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+	scroll-behavior: smooth !important;
+}
+
+body {
+	font-family: "Quicksand", sans-serif;
+	color: "#808dad";
+	background: #0e1630;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(217, 110, 110);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+@layer base {
+	input {
+		@apply bg-dark_blue w-full rounded-md h-full px-5 py-3 outline-none placeholder:text-light_gray;
+	}
+	label {
+		@apply text-light_gray mb-[3px] block;
+	}
+}
+@layer components {
+	._title {
+		@apply text-white font-bold text-xl leading-7 sm:text-3xl  sm:leading-10;
+	}
+	.btn {
+		@apply text-light_red font-bold bg-dark_blue  border border-light_red px-6 py-2 rounded-md hover:bg-black_blue hover:text-light_gray duration-200 hover:border-[#333];
+	}
+	.divider {
+		@apply bg-gray-800 h-[1px] w-full;
+	}
+	.container {
+		@apply mx-auto px-5;
+	}
+}
+
+._subtitle {
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+}
+
+._subtitle::after {
+	height: 3px;
+	content: "";
+	top: 50%;
+	position: absolute;
+	transition: all 0.3s ease-in-out;
+}
