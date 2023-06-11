@@ -23,7 +23,6 @@ const ContactRight = () => {
 			await axios
 				.post("/api/contact", input)
 				.then((res) => {
-					console.log(res);
 					setInput({
 						name: "",
 						email: "",

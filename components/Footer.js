@@ -10,11 +10,8 @@ export default function Footer() {
 				<p className="text-light_gray font-medium ">
 					All rights reserved by
 				</p>
-				<Link
-					target="_blank"
-					href="http://crakotech.vercel.app"
-					className="text-light_red font-semibold">
-					CrakoTech
+				<Link href="#" className="text-light_red font-semibold">
+					Md Mahir
 				</Link>
 				<p className="text-light_gray font-medium ">
 					©{date.getFullYear()}

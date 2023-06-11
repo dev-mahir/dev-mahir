@@ -4,8 +4,6 @@ import Image from "next/image";
 import React from "react";
 
 const Portfolio = () => {
-
-
 	return (
 		<section className="container">
 			<div className="py-14" id="portfolio">
@@ -25,7 +23,7 @@ const Portfolio = () => {
 									src={item}
 									alt=""
 									height={500}
-									width={500}
+									width={300}
 									loading="lazy"
 									className="w-full h-full mx-auto  object-cover group-hover:scale-125 group-hover:rounded-md duration-500 rounded-md"
 								/>

@@ -2,8 +2,7 @@
 
 
 
-
-export const fbLink = "https://www.facebook.com/crakotech";
-export const instagramLink = "https://instagram.com/crakotech";
-export const linkedinLink = "https://linkedin.com/crakotech";
-export const youtubeLink = "https://youtube.com/crakotech";
+export const fbLink = "https://www.facebook.com/developermahir";
+export const instagramLink = "https://www.instagram.com/dev_mahir21";
+export const linkedinLink = "https://www.linkedin.com/in/dev-mahir/";
+export const youtubeLink = null;

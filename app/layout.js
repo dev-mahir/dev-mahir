@@ -8,9 +8,9 @@ import Header from "@/components/Header/Header";
 const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Crako Bio || Next js Single page portfolio",
+	title: "Md Mahir || Mern Stack Developer",
 	description:
-		"Crako Bio next js single page portfolio. Developed by Crako Tech.",
+		"Hi, This is Md Mahir. I am a Mern Stack Developer. Good at JavaScript, React js, Node js, Next js, Tailwind css, MongoDB, Express, Mongoose, GraphQL, Redux toolkit, RTK Query, React Query",
 };
 
 export default function RootLayout({ children }) {

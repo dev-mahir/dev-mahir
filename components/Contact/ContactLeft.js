@@ -70,13 +70,13 @@ const ContactLeft = () => {
 					className="hover:text-light_red">
 					<i className="ri-instagram-fill"></i>
 				</a>
-				<a
+				{/* <a
 					href={youtubeLink}
 					rel="noreferrer"
 					target="_blank"
 					className="hover:text-light_red">
 					<i className="ri-youtube-fill"></i>
-				</a>
+				</a> */}
 			</div>
 		</div>
 	);

@@ -7,6 +7,7 @@ import {
 	youtubeLink,
 } from "@/data/social";
 import { bannerImg } from "@/data/changeImg";
+import Link from "next/link";
 
 export default function Banner() {
 	return (
@@ -17,18 +18,49 @@ export default function Banner() {
 						Hello
 					</h5>
 					<h1 className="text-4xl text-white py-6 font-bold ">
-						This is <span className="text-light_red">Rx John</span>
+						This is <span className="text-light_red">Md Mahir</span>
 					</h1>
 					<h4 className="text-xl font-semibold text-light_red">
 						Mern Stack Developer
 					</h4>
 					<div className="mt-6">
-						<button className="btn">Hire me</button>
-						<button className="text-light_red font-semibold ml-3 underline">
-							Download cv
-							<i className="ml-2 ri-download-2-line"></i>
-						</button>
+						<Link href="#contact" className="btn py-3">
+							Hire me
+						</Link>
+						<a href="/cv/mdmahir.pdf" download>
+							<button className="text-light_red font-semibold ml-3 underline">
+								Download cv
+								<i className="ml-2 ri-download-2-line"></i>
+							</button>
+						</a>
 					</div>
+
+					<div className="mt-10 flex ">
+						<p className="text-light_gray font-semibold">
+							Javascript
+						</p>
+						<span className="text-light_gray font-semibold px-2">
+							|
+						</span>
+						<p className="text-light_gray font-semibold">
+							React js
+						</p>
+						<span className="text-light_gray font-semibold px-2">
+							|
+						</span>
+
+						<p className="text-light_gray font-semibold">
+							Node js
+						</p>
+						<span className="text-light_gray font-semibold px-2">
+							|
+						</span>
+
+						<p className="text-light_gray font-semibold">
+							MongoDB
+						</p>
+					</div>
+
 					<div className="text-light_gray flex items-center mt-10 sm:mt-14">
 						<h5 className="font-bold ">
 							Follow Me &nbsp; - &nbsp;
@@ -55,13 +87,13 @@ export default function Banner() {
 								className="hover:text-light_red">
 								<i className="text-lg ri-instagram-line"></i>
 							</a>
-							<a
+							{/* <a
 								href={youtubeLink}
 								rel="noreferrer"
 								target="_blank"
 								className="hover:text-light_red">
 								<i className="text-lg ri-youtube-line"></i>
-							</a>
+							</a> */}
 						</div>
 					</div>
 				</div>

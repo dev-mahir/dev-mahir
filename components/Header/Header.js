@@ -54,6 +54,13 @@ export default function Header() {
 						Services
 					</Link>
 					<Link
+						target="_blank"
+						href="/resume/mdmahir.pdf"
+						onClick={handleToggle}
+						className=" text-light_gray font-semibold  hover:text-light_red duration-300">
+						Resume
+					</Link>
+					<Link
 						href="#portfolio"
 						onClick={handleToggle}
 						className=" text-light_gray font-semibold  hover:text-light_red duration-300">
