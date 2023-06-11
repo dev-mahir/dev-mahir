@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
 import "remixicon/fonts/remixicon.css";

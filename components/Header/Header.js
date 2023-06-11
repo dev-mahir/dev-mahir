@@ -18,7 +18,8 @@ export default function Header() {
 					<Link
 						href="/"
 						className="text-light_red text-2xl font-semibold">
-						<Image src={logo} width={150} height={50} alt="" />
+						Md Mahir
+						{/* <Image src={logo} width={150} height={50} alt="" /> */}
 					</Link>
 
 
