@@ -1,18 +1,7 @@
 import { NextResponse } from "next/server";
-
-import mongoose from "mongoose";
-
-import { Schema } from "mongoose";
-
-const stackSchema = new Schema({
-	url: { type: String },
-	description: { type: String },
-});
-
-const Javascript =
-	mongoose.models.Javascript || mongoose.model("Javascript", stackSchema);
-
-export default Javascript;
+import mongoose, { Schema } from "mongoose";
+import { cl } from "@/utilis/cl";
+import Javascript from "@/models/Javascript";
 
 const connectDB = async () => {
 	await mongoose.connect(process.env.MONGO_URL),
@@ -24,28 +13,22 @@ const connectDB = async () => {
 export async function GET(request) {
 	await connectDB();
 	try {
-		const data = await request.josn();
-		const content = await Javascript.create(data);
+		const content = await Javascript.find();
 
 		return NextResponse.json(content);
-		console.log(request);
 	} catch (error) {
 		console.log(error);
 	}
 }
 
-
-
-
-
 // Create request
-
 export async function POST(request) {
-	await connectDB();
 	try {
+		await connectDB();
 		const data = await request.json();
-		console.log(data);
+
 		const content = await Javascript.create(data);
+		return NextResponse.json(content);
 	} catch (error) {
 		console.log(error);
 	}

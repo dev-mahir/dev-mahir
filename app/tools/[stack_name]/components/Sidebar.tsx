@@ -1,41 +1,36 @@
+"use client";
 import Link from "next/link";
 import React from "react";
-import AddItemModal from "./AddItemModal";
+import { getData } from "@/api/getData";
+import { useQuery } from "@tanstack/react-query";
 
 type Props = {};
 
 const Sidebar = (props: Props) => {
+	const { data, isLoading, isError } = useQuery({
+		queryKey: ["stack"],
+		queryFn: () => getData("/api/stack/javascript"),
+	});
+
 	return (
 		<>
-			<AddItemModal />
 			<nav className="flex flex-col gap-y-3 pt-10">
-				<button className="btn !px-1 !py-2 text-sm ">Add Item</button>
+				<Link
+					href="/tools/tailwind/add-item"
+					className="btn !px-1 !py-2 text-sm text-center
+				">
+					Add Item
+				</Link>
+
 				<div className="divider"></div>
-				<Link
-					href="/tools/tailwind/#login"
-					className="text-light_gray font-semibold text-sm hover:text-white">
-					Login
-				</Link>
-				<Link
-					href="#opp"
-					className="text-light_gray font-semibold text-sm">
-					OOP
-				</Link>
-				<Link
-					href="#opp"
-					className="text-light_gray font-semibold text-sm">
-					OOP
-				</Link>
-				<Link
-					href="#opp"
-					className="text-light_gray font-semibold text-sm">
-					OOP
-				</Link>
-				<Link
-					href="#opp"
-					className="text-light_gray font-semibold text-sm">
-					OOP
-				</Link>
+
+				{data?.map((item, index) => (
+					<Link
+						href={`/tools/tailwind/${item.menu}`}
+						className="text-light_gray font-semibold text-sm hover:text-white">
+						{item.menu}
+					</Link>
+				))}
 			</nav>
 		</>
 	);
