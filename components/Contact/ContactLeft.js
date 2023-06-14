@@ -1,3 +1,5 @@
+"use client";
+
 import { location, mail, phone } from "@/data/contact";
 import {
 	instagramLink,

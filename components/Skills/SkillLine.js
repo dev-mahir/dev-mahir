@@ -1,3 +1,5 @@
+"use client";
+
 const SkillLine = () => {
 	const data1 = [
 		{

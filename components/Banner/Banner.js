@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import {
@@ -49,16 +51,12 @@ export default function Banner() {
 							|
 						</span>
 
-						<p className="text-light_gray font-semibold">
-							Node js
-						</p>
+						<p className="text-light_gray font-semibold">Node js</p>
 						<span className="text-light_gray font-semibold px-2">
 							|
 						</span>
 
-						<p className="text-light_gray font-semibold">
-							MongoDB
-						</p>
+						<p className="text-light_gray font-semibold">MongoDB</p>
 					</div>
 
 					<div className="text-light_gray flex items-center mt-10 sm:mt-14">
