@@ -1,7 +1,7 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import TextEditor from "./components/TextEditor";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
@@ -20,7 +20,7 @@ const Page = (props: Props) => {
 		submenu: "",
 	});
 
-	const desc = ReactHtmlParser(contents);
+	const desc = parse(contents); //
 
 	const postData = async () => {
 		await fetch("/api/stack/javascript", {
