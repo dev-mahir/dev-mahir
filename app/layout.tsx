@@ -3,10 +3,9 @@ import "./globals.css";
 import { Quicksand } from "next/font/google";
 import "remixicon/fonts/remixicon.css";
 import { Toaster } from "react-hot-toast";
-import * as gtag from "../lib/gtag";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Metadata } from "next";
 import Header from "../components/Header/Header";
+import Providers from "../utilis/provider";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }) {
-	const queryClient = new QueryClient();
 	return (
 		<html lang="en">
 			<head>
@@ -32,12 +30,12 @@ export default function RootLayout({ children }) {
 					type="image/x-icon"
 				/>
 				{/* <script
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
-					crossOrigin="anonymous"></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
+          crossOrigin="anonymous"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
@@ -46,16 +44,17 @@ export default function RootLayout({ children }) {
                 page_path: window.location.pathname,
               });
             `,
-					}}
-				/> */}
+          }}
+        /> */}
 			</head>
 			<body>
 				<Toaster />
-				<QueryClientProvider client={queryClient}>
+
+				<Providers>
 					<Header />
 					{children}
 					<Footer />
-				</QueryClientProvider>
+				</Providers>
 			</body>
 		</html>
 	);
