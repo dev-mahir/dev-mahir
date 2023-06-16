@@ -1,4 +1,3 @@
-"use client";
 import Footer from "../components/Footer";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
 					href="/favicon.ico"
 					type="image/x-icon"
 				/>
-				<script
+				{/* <script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
 					crossOrigin="anonymous"></script>
@@ -48,7 +47,7 @@ export default function RootLayout({ children }) {
               });
             `,
 					}}
-				/>
+				/> */}
 			</head>
 			<body>
 				<Toaster />
