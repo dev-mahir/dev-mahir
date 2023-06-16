@@ -26,8 +26,8 @@ const page = (props: Props) => {
 	return (
 		<div className="py-10 container">
 			<div className="flex gap-10 flex-wrap">
-				{data.map((item, index) => (
-					<Link
+				{data.map((item, index: number) => (
+					<Link key={index}
 						href={`/tools/${item.url}`}
 						className="text-light_gray font-semibold
                              text-xl  duration-300 bg-gray-800 px-8 py-7 rounded-md flex-grow text-center hover:bg-gray-700">

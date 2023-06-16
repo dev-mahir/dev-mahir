@@ -6,7 +6,9 @@ import { getData } from "@/api/getData";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 
-type Props = {};
+type Props = {
+	children: React.ReactNode
+};
 
 const Page = ({ children }: Props) => {
 	const { data, isLoading, isError } = useQuery({
@@ -19,8 +21,8 @@ const Page = ({ children }: Props) => {
 		<section className="py-10 px-5 gap-10 flex max-h-screen overflow-y-auto ">
 			<div className="flex-grow ml-[180px]">
 				<div>
-					{data?.map((item, index) => (
-						<div
+					{data?.map((item, index : number) => (
+						<div key={index}
 							id={`/tools/tailwind/#${item.menu}`}
 							className="border-b border-b-gray-500 pt-3 pb-5">
 							<h2 className="text-lg text-light_gray capitalize border-b border-b-gray-700">

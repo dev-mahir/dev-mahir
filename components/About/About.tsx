@@ -4,6 +4,7 @@ import React from "react";
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
 
+
 const About = () => {
 	return (
 		<div className="py-16" id="about">

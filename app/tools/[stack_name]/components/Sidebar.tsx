@@ -24,8 +24,8 @@ const Sidebar = (props: Props) => {
 
 				<div className="divider"></div>
 
-				{data?.map((item, index) => (
-					<Link
+				{data?.map((item, index: number) => (
+					<Link key={index}
 						href={`/tools/tailwind/${item.menu}`}
 						className="text-light_gray font-semibold text-sm hover:text-white">
 						{item.menu}

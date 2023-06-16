@@ -3,7 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import ProjectCounter from "./ProjectCounter";
-import { aboutImg } from "@/data/changeImg";
+import { aboutImg } from "../../data/changeImg";
+
 
 const AboutRight = () => {
 	return (

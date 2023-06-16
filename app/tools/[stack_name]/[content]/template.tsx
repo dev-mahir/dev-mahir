@@ -1,6 +1,8 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+	children: React.ReactNode;
+};
 
 const Template = ({children}: Props) => {
   return (
