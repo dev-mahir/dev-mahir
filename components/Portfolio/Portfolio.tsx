@@ -1,7 +1,9 @@
 "use client";
-import { portfolioImg } from "@/data/changeImg";
+
 import Image from "next/image";
 import React from "react";
+import { PortfolioTypes } from "../../types.ds";
+import { portfolioItem } from "../../data/portolio";
 
 const Portfolio = () => {
 	return (
@@ -14,22 +16,29 @@ const Portfolio = () => {
 					<h2 className="_title">Some Of My Distinguished Works</h2>
 				</div>
 				<div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 sm:gap-5 md:gap-7 mt-10">
-					{portfolioImg.map((item, index) => (
-						<div
-							key={index}
-							className="bg-dark_blue cursor-pointer p-2 rounded-md group border-2 border-transparent duration-300 hover:border-light_gray hover:border-2">
-							<div className="overflow-hidden rounded-md h-[300px]">
-								<Image
-									src={item}
-									alt=""
-									height={500}
-									width={300}
-									loading="lazy"
-									className="w-full h-full mx-auto  object-cover group-hover:scale-125 group-hover:rounded-md duration-500 rounded-md"
-								/>
+					{portfolioItem.map(
+						(item: PortfolioTypes, index: number) => (
+							<div
+								key={index}
+								className="bg-dark_blue cursor-pointer p-2 rounded-md group border-2 border-transparent duration-300 hover:border-light_gray hover:border-2">
+								<div className="overflow-hidden rounded-md h-[300px] relative group">
+									<Image
+										src={item.image}
+										alt=""
+										height={500}
+										width={300}
+										loading="lazy"
+										className="w-full h-full mx-auto  object-cover group-hover:scale-125 group-hover:rounded-md duration-500 rounded-md"
+									/>
+									<div className="absolute top-0 left-0 bg-gray-800/50 w-full h-full flex justify-center items-center  opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+										<h2 className="font-semibold text-xl text-white">
+											{item.name}
+										</h2>
+									</div>
+								</div>
 							</div>
-						</div>
-					))}
+						)
+					)}
 				</div>
 			</div>
 		</section>

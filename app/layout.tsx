@@ -36,6 +36,9 @@ export default function RootLayout({ children }) {
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
 					crossOrigin="anonymous"></script>
 				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-85Y2WNN21R"></script>
+				<script
 					dangerouslySetInnerHTML={{
 						__html: `
               window.dataLayer = window.dataLayer || [];
