@@ -57,8 +57,6 @@ const Page = (props: Props) => {
 		}
 	};
 
-
-
 	return (
 		<div className="flex gap-10">
 			<div className="w-[60%] bg-gray-800 rounded-md flex-shrink-0 px-5 py-8">
