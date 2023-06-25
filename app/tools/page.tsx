@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import "./tools.Module.css";
+import Head from "next/head";
 
 type Props = {};
 
@@ -24,18 +26,28 @@ const page = (props: Props) => {
 		},
 	];
 	return (
-		<div className="py-10 container">
-			<div className="flex gap-10 flex-wrap">
-				{data.map((item, index: number) => (
-					<Link key={index}
-						href={`/tools/${item.url}`}
-						className="text-light_gray font-semibold
+		<>
+			<Head>
+				<title>Tools</title>
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
+					crossOrigin="anonymous"></script>
+			</Head>
+			<div className="py-10 container">
+				<div className="flex gap-10 flex-wrap">
+					{data.map((item, index: number) => (
+						<Link
+							key={index}
+							href={`/tools/${item.url}`}
+							className="text-light_gray font-semibold
                              text-xl  duration-300 bg-gray-800 px-8 py-7 rounded-md flex-grow text-center hover:bg-gray-700">
-						{item.name}
-					</Link>
-				))}
+							{item.name}
+						</Link>
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

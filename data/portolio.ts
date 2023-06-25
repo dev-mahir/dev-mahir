@@ -1,18 +1,17 @@
 export const portfolioItem = [
 	{
-		image: "/portfolio-item/portfolio1.png",
-		name: "Booking.com",
+		image: "/portfolio-item/chorki.png",
+		name: "Chorki | OTT",
+		link: "https://chorki-clone.vercel.app",
 	},
 	{
-		image: "/portfolio-item/portfolio2.png",
-		name: "Harri shop",
+		image: "/portfolio-item/harri.png",
+		name: "Harri | Ecommerce",
+		link: "https://harri.vercel.app",
 	},
 	{
-		image: "/portfolio-item/portfolio3.png",
-		name: "Booking.com",
-	},
-	{
-		image: "/portfolio-item/portfolio4.png",
-		name: "Booking.com",
+		image: "/portfolio-item/amar-school.png",
+		name: "Amar School | LMS",
+		link: "https://amarschool.vercel.app/",
 	},
 ];
