@@ -1,12 +1,13 @@
 "use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import React from "react";
-import "./tools.Module.css";
 import Head from "next/head";
+
+import './tools.Module.css'
 
 type Props = {};
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
 	const data = [
 		{
 			name: "Tailwind",
@@ -25,15 +26,21 @@ const page = (props: Props) => {
 			url: "/nextjs",
 		},
 	];
+
+	useEffect(() => {
+		// Code to be executed on the client side
+		(window.adsbygoogle = window.adsbygoogle || []).push({});
+	}, []);
+
 	return (
 		<>
 			<Head>
-				<title>Tools</title>
 				<script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
 					crossOrigin="anonymous"></script>
 			</Head>
+
 			<div className="py-10 container">
 				<div className="flex gap-10 flex-wrap">
 					{data.map((item, index: number) => (
@@ -51,4 +58,4 @@ const page = (props: Props) => {
 	);
 };
 
-export default page;
+export default Page;
