@@ -29,7 +29,7 @@ export default function Banner() {
 						<Link href="#contact" className="btn py-3">
 							Hire me
 						</Link>
-						<a href="/cv/mdmahir.pdf" download>
+						<a href="/resume/mdmahir.pdf" download>
 							<button className="text-light_red font-semibold ml-3 underline">
 								Download cv
 								<i className="ml-2 ri-download-2-line"></i>
