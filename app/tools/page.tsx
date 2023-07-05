@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import './tools.Module.css'
+import "./tools.Module.css";
 
 type Props = {};
 
@@ -27,11 +27,6 @@ const Page = (props: Props) => {
 		},
 	];
 
-	useEffect(() => {
-		// Code to be executed on the client side
-		(window.adsbygoogle = window.adsbygoogle || []).push({});
-	}, []);
-
 	return (
 		<>
 			<Head>
@@ -40,6 +35,8 @@ const Page = (props: Props) => {
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401442074021157"
 					crossOrigin="anonymous"></script>
 			</Head>
+
+			
 
 			<div className="py-10 container">
 				<div className="flex gap-10 flex-wrap">
