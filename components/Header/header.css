@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+	@media screen and (max-width: 991px) {
+		._mobile-menu {
+			@apply bg-dark_blue z-50 fixed gap-6 pl-7 pt-24 top-0 left-0 h-screen w-5/6 flex-col flex -translate-x-full duration-300;
+		}
+	}
+	._navbar-menu {
+		@apply space-x-4;
+	}
+}
