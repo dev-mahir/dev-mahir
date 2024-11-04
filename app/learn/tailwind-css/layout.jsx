@@ -11,8 +11,10 @@ const TailwindLayout = ({ children }) => {
 							className="text-gray-400 font-medium">
 							Intro
 						</Link>
-						<Link href="/" className="text-gray-400 font-medium">
-							Intro
+						<Link
+							href="/learn/tailwind-css/bg"
+							className="text-gray-400 font-medium">
+							Background
 						</Link>
 					</nav>
 				</div>

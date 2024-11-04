@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import Header from "../components/Header/Header";
 import Providers from "../utilis/provider";
 import * as gtag from "../lib/gtag";
+import { Analytics } from "@vercel/analytics/react";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -20,6 +21,10 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<head>
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4204160329524961"
+					crossOrigin="anonymous"></script>
 				<meta
 					name="keywords"
 					content="md mahir, mahir ,md mahir, dev mahir, mern stack developer, front end developer, full stack developer"
@@ -54,6 +59,7 @@ export default function RootLayout({ children }) {
 			</head>
 			<body>
 				<Toaster />
+				<Analytics />
 
 				<Providers>
 					<Header />
