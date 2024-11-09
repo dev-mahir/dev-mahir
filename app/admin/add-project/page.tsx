@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import { PortfolioTypes } from "../../../types.ds";
 
-type Props = {};
-
-function AddProject({}: Props) {
+function AddProject() {
 	const [input, setInput] = useState<PortfolioTypes>({
 		name: "",
 		link: "",
 		source_code: "",
-		image: "",
 	});
 
 	const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
@@ -21,18 +18,33 @@ function AddProject({}: Props) {
 		}));
 	};
 
-	const handleFileChange: React.ChangeEventHandler<HTMLInputElement> = (
-		e
-	) => {
-		setInput((prevState) => ({
-			...prevState,
-			photo: e.target.files[0],
-		}));
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+
+		try {
+			const response = await fetch("/api/project", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(input),
+			});
+
+			if (response.ok) {
+				setInput((prevState) => ({
+					name: "",
+					link: "",
+					source_code: "",
+				}));
+			}
+		} catch (error) {
+			console.log("Error front", error);
+		}
 	};
 
 	return (
 		<section>
-			<form action="">
+			<form onSubmit={handleSubmit}>
 				<div className="mb-3">
 					<input
 						type="text"
@@ -63,18 +75,11 @@ function AddProject({}: Props) {
 						className="py-3 px-3 text-light_gray"
 					/>
 				</div>
+
 				<div className="mb-3">
-					<input
-						type="file"
-						name="photo"
-						id="photo"
-						accept="image/*"
-						onChange={handleFileChange}
-						className="py-3 px-3 text-light_gray"
-					/>
-				</div>
-				<div className="mb-3">
-					<button className="btn">Add project</button>
+					<button type="submit" className="btn">
+						Add project
+					</button>
 				</div>
 			</form>
 		</section>

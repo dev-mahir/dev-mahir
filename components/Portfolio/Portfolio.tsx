@@ -31,7 +31,7 @@ const Portfolio = () => {
 											className="w-full h-full mx-auto object-top object-cover group-hover:object-bottom group-hover:rounded-md duration-500 rounded-md"
 										/>
 										<div className="absolute top-0 left-0 bg-gray-800/50 w-full h-full flex justify-center items-center  opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-											<h2 className="font-semibold text-xl text-white">
+											<h2 className="font-semibold text-xl text-center text-white">
 												{item.name}
 											</h2>
 										</div>

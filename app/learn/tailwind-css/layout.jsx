@@ -1,8 +1,11 @@
+"use client";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
+import LearnHeader from "../../../components/Header/LearnHeader";
 const TailwindLayout = ({ children }) => {
 	return (
 		<>
+			<LearnHeader />
 			<section className="mt-[74px] flex px-5 h-[77vh]">
 				<div className="w-[120px] flex-shrink-0 border-r border-gray-500">
 					<nav className="flex flex-col gap-y-1">

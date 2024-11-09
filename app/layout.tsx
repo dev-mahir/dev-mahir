@@ -4,10 +4,11 @@ import { Quicksand } from "next/font/google";
 import "remixicon/fonts/remixicon.css";
 import { Toaster } from "react-hot-toast";
 import { Metadata } from "next";
-import Header from "../components/Header/Header";
 import Providers from "../utilis/provider";
 import * as gtag from "../lib/gtag";
 import { Analytics } from "@vercel/analytics/react";
+import ChangeHeader from "../components/Header/ChangeHeader";
+import Header from "../components/Header/Header";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -21,9 +22,9 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<head>
-				
-				
-				<meta name="google-adsense-account" content="ca-pub-4204160329524961"></meta>
+				<meta
+					name="google-adsense-account"
+					content="ca-pub-4204160329524961"></meta>
 				<meta
 					name="keywords"
 					content="md mahir, mahir ,md mahir, dev mahir, mern stack developer, front end developer, full stack developer"
@@ -61,7 +62,6 @@ export default function RootLayout({ children }) {
 				<Analytics />
 
 				<Providers>
-					<Header />
 					{children}
 					<Footer />
 				</Providers>
