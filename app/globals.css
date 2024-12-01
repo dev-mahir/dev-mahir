@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html {
 	scroll-behavior: smooth !important;
 }
@@ -11,7 +9,6 @@ html {
 body {
 	font-family: "Quicksand", sans-serif;
 	color: "#808dad";
-	background: #0e1630;
 }
 
 ::-webkit-scrollbar {
@@ -51,6 +48,41 @@ body {
 	}
 	.container {
 		@apply mx-auto px-5;
+	}
+
+	.btn-primary {
+		@apply bg-primary text-white  hover:bg-secondary;
+	}
+
+	.btn-primary-outline {
+		@apply border border-primary text-primary hover:border-secondary;
+	}
+	.btn-secondary {
+		@apply bg-secondary text-white  hover:bg-primary;
+	}
+	.card {
+		@apply border border-gray-100 rounded shadow-sm;
+	}
+
+	.row {
+		@apply flex flex-wrap;
+	}
+
+	.col-2 {
+		@apply px-3 md:flex-shrink-0 md:flex-grow-0 md:basis-2/4;
+	}
+	.col-3 {
+		@apply px-3 flex-shrink-0 flex-grow-0 basis-2/6;
+	}
+
+	.form-control {
+		@apply py-2;
+	}
+	.icon_sq {
+		@apply h-8 w-8 rounded-full flex justify-center items-center;
+	}
+	.nav-link {
+		@apply font-medium text-base font-poppins;
 	}
 }
 

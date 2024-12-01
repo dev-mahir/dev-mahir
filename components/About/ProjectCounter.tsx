@@ -25,7 +25,7 @@ export default function ProjectCounter() {
 					<div
 						key={index}
 						className="flex items-center sm:flex-col sm:justify-center sm:items-center md:flex-row   gap-3 sm:gap-0">
-						<i className=" ri-calendar-line text-red-500/20 text-8xl block"></i>
+						<i className=" ri-calendar-line text-light_red text-8xl block"></i>
 						<div className="flex gap-3  items-center mt-2  sm:flex-col sm:gap-1 md:flex-row sm:-mt-10 md:mt-1 md:-ml-20 lg:-ml-[90px]">
 							<span className="font-bold text-4xl sm:text-3xl lg:text-2xl text-white">
 								<CountUp end={item.counter} duration={5} />

@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
 import "remixicon/fonts/remixicon.css";
@@ -7,8 +6,9 @@ import { Metadata } from "next";
 import Providers from "../utilis/provider";
 import * as gtag from "../lib/gtag";
 import { Analytics } from "@vercel/analytics/react";
-import ChangeHeader from "../components/Header/ChangeHeader";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
+
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 					content="ca-pub-4204160329524961"></meta>
 				<meta
 					name="keywords"
-					content="md mahir, mahir ,md mahir, dev mahir, mern stack developer, front end developer, full stack developer"
+					content="md mahir,mdmahir, devmahir, dev-mahir, mahir ,md mahir, dev mahir, mern stack developer, front end developer, full stack developer"
 				/>
 				<meta name="robots" content="all" />
 				<link
@@ -60,11 +60,9 @@ export default function RootLayout({ children }) {
 			<body>
 				<Toaster />
 				<Analytics />
-
-				<Providers>
-					{children}
-					<Footer />
-				</Providers>
+				<Header />
+				<Providers>{children}</Providers>
+				<Footer/>
 			</body>
 		</html>
 	);

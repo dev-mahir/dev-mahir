@@ -5,18 +5,12 @@ import Image from "next/image";
 import React from "react";
 import "./header.css";
 import { usePathname } from "next/navigation";
-
-import { logo } from "@/data/changeImg";
+import { main_menu } from "../../constants";
 
 export default function Header() {
 	const router = usePathname();
 
-
-	
-
-	
 	const [isOpen, modalRef, handleToggle] = useModal();
-
 
 	return (
 		<>
@@ -44,43 +38,15 @@ export default function Header() {
 								<i className="text-2xl text-light_gray ri-close-line"></i>
 							</button>
 
-							<Link
-								href="/"
-								onClick={handleToggle}
-								className="text-light_gray font-semibold  hover:text-light_red duration-300">
-								Home
-							</Link>
-							<Link
-								href="#about"
-								onClick={handleToggle}
-								className="text-light_gray font-semibold  hover:text-light_red duration-300">
-								About
-							</Link>
-							<Link
-								href="#services"
-								onClick={handleToggle}
-								className="text-light_gray font-semibold  hover:text-light_red duration-300">
-								Services
-							</Link>
-							<Link
-								target="_blank"
-								href="/resume/mdmahir.pdf"
-								onClick={handleToggle}
-								className=" text-light_gray font-semibold  hover:text-light_red duration-300">
-								Resume
-							</Link>
-							<Link
-								href="#portfolio"
-								onClick={handleToggle}
-								className=" text-light_gray font-semibold  hover:text-light_red duration-300">
-								Portfolio
-							</Link>
-							<Link
-								href="#contact"
-								onClick={handleToggle}
-								className="text-light_gray font-semibold  hover:text-light_red duration-300">
-								Contact
-							</Link>
+							{main_menu.map((item) => (
+								<Link
+									key={item.name}
+									href={item.slug}
+									onClick={handleToggle}
+									className="text-light_gray font-semibold  hover:text-light_red duration-300">
+									{item.name}
+								</Link>
+							))}
 						</nav>
 
 						<button

@@ -26,6 +26,6 @@
 		"**/*.ts",
 		"**/*.tsx",
 		"app/learn/page.jsx"
-	],
+, "app/api/blog/route.js"	],
 	"exclude": ["node_modules"]
 }

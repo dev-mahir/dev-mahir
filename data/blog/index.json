@@ -1,0 +1,11 @@
+{
+	"blog_data": [
+		{
+			"id": 1,
+			"author": "Md Mahir",
+			"tag": "Computer",
+			"image": "/images/blog1.webp",
+			"title": "Why we should learn Next js"
+		}
+	]
+}

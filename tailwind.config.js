@@ -8,10 +8,12 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				primary: "#3858f6",
 				light_gray: "#808dad",
 				light_red: "#eb4a4a",
 				black_blue: "#0e1630",
 				dark_blue: "#171f38",
+				soft_gray: "#f0f2f5",
 			},
 			fontFamily: {
 				primary: '"Quicksand", sans-serif',

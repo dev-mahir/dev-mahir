@@ -11,7 +11,7 @@ export default function Footer() {
 	return (
 		<>
 			{router.split("/")[1] !== "admin" && (
-				<footer className="py-5 border-t border-t-gray-600">
+				<footer className="py-5 border-t bg-black_blue border-t-gray-600">
 					<div className="flex justify-center gap-2">
 						<p className="text-light_gray font-medium ">
 							All rights reserved by

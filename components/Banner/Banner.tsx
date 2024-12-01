@@ -41,17 +41,19 @@ export default function Banner() {
 						<p className="text-light_gray font-semibold">
 							Javascript
 						</p>
-						<span className="text-light_gray font-semibold px-2">
+						<span className="text-light_gray font-semibold px-2 ">
 							|
 						</span>
-						<p className="text-light_gray font-semibold">
+						<p className="text-light_gray font-semibold whitespace-nowrap">
 							React js
 						</p>
 						<span className="text-light_gray font-semibold px-2">
 							|
 						</span>
 
-						<p className="text-light_gray font-semibold">Node js</p>
+						<p className="text-light_gray font-semibold  whitespace-nowrap">
+							Node js
+						</p>
 						<span className="text-light_gray font-semibold px-2">
 							|
 						</span>
