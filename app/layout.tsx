@@ -3,7 +3,7 @@ import { Quicksand } from "next/font/google";
 import "remixicon/fonts/remixicon.css";
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
-import Providers from "../utils/provider"; // Ensure this path is correct
+import Providers from "../utilis/provider"; // Ensure this path is correct
 import * as gtag from "../lib/gtag";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "../components/Header/Header";
