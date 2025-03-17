@@ -1,54 +1,40 @@
-import Image from "next/image";
-import React from "react";
-import { FaDotCircle } from "react-icons/fa";
-import Tab from "../../../../components/Tab/Tab"
+import Head from "next/head";
 
-const Author = () => {
-	return (
-		<>
-			<section className="py-20">
-				<div className="container grid grid-cols-5 gap-10 divide-x">
-					<div className="col-span-3">
-						<div className="">
-							<Image
-								height={500}
-								width={500}
-								className="w-full  h-[300px] object-cover object-top"
-								src="/images/author/mdmahir.jpg"
-								alt="Md Mahir"
-							/>
-							<div className="flex justify-between px-5 -mt-10">
-								<p className="font-bold text-xl text-white">
-									Dev Mahir
-								</p>
-								<button>
-									<FaDotCircle />
-								</button>
-							</div>
-						</div>
+export default function BlogPostPage({ blog }) {
+  if (!blog) return <h1>Blog Not Found</h1>;
 
-						<div className="mt-5 overflow-hidden">
-							<Tab />
-						</div>
-					</div>
-					<div className="col-span-2 pl-7">
-						<Image
-							height={100}
-							width={100}
-							className="w-20  h-20 object-cover rounded-full"
-							src="/images/author/mdmahir.jpg"
-							alt="Md Mahir"
-						/>
-						<p className="font-semibold mt-3">Dev Mahir</p>
-						<p className="text-sm font-medium ">
-							Hi, I'm a full stack developer.I'm working as a full
-							stack developer about 3 years.
-						</p>
-					</div>
-				</div>
-			</section>
-		</>
-	);
-};
+  return (
+    <>
+      <Head>
+        <title>{blog.metaTitle}</title>
+        <meta name="description" content={blog.metaDescription} />
+        <meta name="keywords" content={blog.metaKeywords.join(", ")} />
+      </Head>
+      <article>
+        <h1>{blog.title}</h1>
+        <p>By {blog.author.name}</p>
+        <img src={blog.featuredImage} alt={blog.title} />
+        <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+        <hr />
+        <div>
+          <h3>About the Author</h3>
+          <img src={blog.author.profileImage} alt={blog.author.name} width="100" />
+          <p>{blog.author.bio}</p>
+          <p>Follow: 
+            <a href={blog.author.socialLinks.twitter} target="_blank">Twitter</a> | 
+            <a href={blog.author.socialLinks.linkedin} target="_blank">LinkedIn</a>
+          </p>
+        </div>
+      </article>
+    </>
+  );
+}
 
-export default Author;
+export async function getServerSideProps({ params }) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/${params.slug}`);
+  const blog = await res.json();
+
+  return {
+    props: { blog },
+  };
+}
